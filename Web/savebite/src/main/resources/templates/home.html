@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveBite - Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hero {
+      background-image: url('src/images/home-bg.jpg'); /* Imagem do Background */
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Sobreposição escura */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade da sobreposição */
+      z-index: 1;
+    }
+
+    /* Ajuste do conteúdo da hero */
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    body {
+      background-color: #a3f3a3;
+    }
+
+    .hero h1 {
+      font-size: 3.0em; 
+      color: #ffffff; /* Cor do título */
+      margin-bottom: 20px; /* Espaço abaixo do título */
+      text-align: center; /* Centraliza o título */
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .hero h1:hover {
+      transform: scale(1.1);
+      color: #ffcc00;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      transition: opacity 0.3s ease;
+    }
+
+    .hero p:hover {
+      opacity: 0.8;
+    }
+
+    .cta-button {
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border-radius: 5px;
+      color: white;
+      background-color: #5cb85c;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      font-weight: bold; /* Aplica o negrito */
+      text-decoration: none; /* Mantém o texto sem sublinhado */
+      color: white; /* Garante que a cor não mude */
+      transition: background-color 0.3s ease, transform 0.3s ease; 
+
+    }
+
+    .feature-card {
+      background-color: white;
+      padding: 20px;
+      border: none;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: #5cb85c;
+      margin-bottom: 15px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+      color: #4a9e4a;
+      transform: rotate(10deg);
+    }
+
+    .testimonial {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      font-style: italic;
+      color: #555;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+      background-color: #0075008a;
+      padding: 10px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #005500;
+    }
+
+    nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #4a9e4a;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+    
+    footer {
+      transition: background-color 0.3s ease;
+    }
+
+    footer:hover {
+      background-color: #333333;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo-container">
+        <a href="home">
+          <img src="src/images/logo_horizontal_branco.png" alt="Logo SaveBite" style="height: 50px;">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre">Sobre Nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro-login">Cadastro/Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="downloads">Download do App</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Bem-vindo ao SaveBite</h1>
+      <p>Transforme ingredientes esquecidos em pratos deliciosos e evite o desperdício.<br> Junte-se a nós na missão de cozinhar com consciência.</p>
+      <a href="cadastro-login" class="cta-button">Cadastre-se Agora</a>
+    </div>
+  </section>
+
+  <!-- Seção de Funcionalidades -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4" style="font-weight: bold;">O que o SaveBite Oferece:</h2>
+    <div class="row">
+      <!-- Funcionalidade 1 -->
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">🍲</div>
+          <h4>Receitas Personalizadas</h4>
+          <p>Encontre receitas usando os ingredientes que já tem em casa.</p>
+        </div>
+      </div>
+
+      <!-- Funcionalidade 2 -->
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">📜</div>
+          <h4>Adição de Receitas</h4>
+          <p>Compartilhe suas próprias receitas e inspire a comunidade.</p>
+        </div>
+      </div>
+
+      <!-- Funcionalidade 3 -->
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">💡</div>
+          <h4>Dicas de Armazenamento</h4>
+          <p>Acesse dicas para armazenar e conservar alimentos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Depoimentos -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4" style="font-weight: bold;">O que Nossos Usuários Dizem</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="testimonial">
+          <p>"O SaveBite mudou a minha forma de cozinhar. Consigo aproveitar tudo o que tenho em casa!"</p>
+          <small>- Ana Paula, São Paulo</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="testimonial">
+          <p>"Com o SaveBite, reduzi o desperdício de alimentos e ainda aprendi receitas novas!"</p>
+          <small>- João Carlos, Rio de Janeiro</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chamada para Baixar o App -->
+  <section class="text-center py-5" style="background-color: #f8f9fa;">
+    <h2>Baixe o SaveBite e Comece a Cozinhar com Consciência</h2>
+    <p>Disponível para Android e Desktop. Transforme sua cozinha com praticidade e sustentabilidade.</p>
+    <a href="downloads" class="cta-button">Baixar o App</a>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+      <p>&copy; 2024 SaveBite. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

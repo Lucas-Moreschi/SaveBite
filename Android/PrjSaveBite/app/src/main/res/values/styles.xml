@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Design.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/logo_splash</item> <!-- Fundo personalizado -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- res/values/styles.xml -->
+    <style name="CustomSpinner" parent="Widget.AppCompat.Spinner.Underlined">
+        <item name="android:background">@drawable/spinner_background</item>
+        <item name="android:popupBackground">#FFFFFF</item>
+        <item name="android:drawableRight">@drawable/ic_spinner_arrow_green</item>
+    </style>
+</resources>

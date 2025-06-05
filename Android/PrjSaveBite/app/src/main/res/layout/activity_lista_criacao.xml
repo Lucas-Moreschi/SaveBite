@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2CFFFFFF"
+    android:backgroundTint="#48A84C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#48A84C"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#009688"
+            android:backgroundTint="#4CAF50"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_horizontal"
+            android:text="Save Bite"
+            android:textColor="#F6F1F1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="cursive"
+            android:text="Vamos Começar!"
+            android:textAlignment="center"
+            android:textColor="#4CAF50"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTituloRec"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#4CAF50"
+            android:hint="Qual o nome da Receita?"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editIngrediente"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#4CAF50"
+            android:hint="Digite os Ingredientes"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtQtd"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#4CAF50"
+                android:gravity="center"
+                android:hint="Qtd."
+                android:inputType="numberDecimal"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spnMedida"
+                style="@style/CustomSpinner"
+                android:layout_width="66dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:spinnerMode="dialog" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#4CAF50"
+                android:onClick="adicionarIngrediente"
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:elevation="4dp"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/ListViewIngredientes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="#DDDDDD"
+            android:backgroundTint="#FFF8F8"
+            android:textFilterEnabled="false"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editDescricaoRec"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edittext_borde"
+            android:gravity="top"
+            android:hint="Escreva uma breve descrição para esta receita:(Máximo 255 caracteres)"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:paddingStart="5dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editPassoAPasso"
+            android:layout_width="match_parent"
+            android:layout_height="192dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edittext_borde"
+            android:hint="Descreva o passo a passo da receita. \nCada linha representa uma etapa. Exemplo: \n \n - Etapa 1. \n - Etapa 2. \n - Etapa 3. \n ..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:lines="10"
+            android:paddingStart="5dp"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="162dp"
+                android:layout_height="128dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="162dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|center_horizontal"
+                    android:text="Tempo de preparo: "
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTempoPreparo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#4CAF50"
+                    android:hint="(Em minutos)"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="161dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|center_horizontal"
+                    android:text="Quantidade de porções:"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editPorcoes"
+                    android:layout_width="133dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#4CAF50"
+                    android:hint="Qtd. Porções"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Adicionando campos abaixo do ListView -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="104dp"
+                android:layout_height="83dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="103dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center|center_horizontal"
+                    android:text="Dificuldade:"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerDificuldade"
+                    style="@style/CustomSpinner"
+                    android:layout_width="103dp"
+                    android:layout_height="40dp"
+                    android:gravity="center|center_horizontal"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSair2"
+                android:layout_width="wrap_content"
+                android:layout_height="59dp"
+                android:backgroundTint="#2A612A"
+                android:elevation="4dp"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:text="Voltar ao menu"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnSalvarReceita"
+                android:layout_width="167dp"
+                android:layout_height="59dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="25dp"
+                android:backgroundTint="#4CAF50"
+                android:elevation="4dp"
+                android:onClick="salvarReceita"
+                android:text="Salvar Receita"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

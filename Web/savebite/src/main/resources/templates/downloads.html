@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveBite - Download do App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-color: #0075008a;
+      padding: 10px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #005500;
+    }
+
+    .logo-container img {
+      max-height: 50px;
+      cursor: pointer;
+    }
+
+    nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #4a9e4a;
+      text-decoration: none;
+      transform: translateY(-2px);
+    } 
+
+    .download-hero {
+      background-image: url('imagens/fundo-download.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 15px 0;
+      margin-top: 85px;
+      color: white;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .download-hero:hover {
+      transform: scale(1.02);
+    }
+
+    .download-hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .download-hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .download-button {
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border-radius: 5px;
+      color: white;
+      background-color: #5cb85c;
+      text-decoration: none !important;
+      margin: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #4a9e4a;
+      transform: translateY(-5px);
+      text-decoration: none;
+      color: white;
+    }
+
+    .qr-code {
+      width: 150px;
+      height: 150px;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      margin: 20px auto;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .qr-code:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+
+    .qr-code img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    footer {
+      background-color: #333333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    footer:hover {
+      background-color: #444444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo-container">
+        <a href="home">
+          <img src="src/images/logo_horizontal_branco.png" alt="Logo SaveBite" style="height: 50px;">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav">
+			<li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="sobre">Sobre Nós</a></li>
+			<li class="nav-item"><a class="nav-link" href="funcionalidades">Funcionalidades</a></li>
+			<li class="nav-item"><a class="nav-link" href="cadastro-login">Cadastro/Login</a></li>
+			<li class="nav-item"><a class="nav-link" href="downloads">Download do App</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section de Download -->
+  <section class="download-hero">
+    <div class="container" style="color: #005500;">
+      <h1>Baixe o SaveBite e Comece a Cozinhar com Consciência</h1>
+      <p>Disponível para Android e Desktop. Transforme sua cozinha com praticidade e sustentabilidade.</p>
+    </div>
+  </section>
+
+  <!-- Seção de Botões de Download -->
+  <section class="container py-5 text-center">
+    <h2 class="mb-4">Escolha sua Plataforma</h2>
+    
+    <!-- Botões de Download -->
+    <div class="d-flex justify-content-center mb-4">
+      <a href="#" class="download-button">Baixar para Android</a>
+      <a href="#" class="download-button">Baixar para Desktop</a>
+    </div>
+
+    <!-- QR Code -->
+    <div>
+      <h4>Escaneie o QR Code para Download</h4>
+      <div class="qr-code">
+        <img src="imagens/qr-code-placeholder.png" alt="QR Code para Download">
+      </div>
+      <p class="mt-3">Escaneie com seu celular para baixar o app diretamente.</p>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 SaveBite. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

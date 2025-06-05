@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2FFFFFFF"
+    android:backgroundTint="#48A84C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Nome da Receita -->
+        <TextView
+            android:id="@+id/txtTituloReceita"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#009688"
+            android:backgroundTint="#4CAF50"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_horizontal"
+            android:text="Nome da Receita"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Descrição da Receita -->
+        <TextView
+            android:id="@+id/txtDescricaoReceita"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:ellipsize="none"
+            android:paddingLeft="10dp"
+            android:text="Descrição da receita:"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- Tempo de Preparo -->
+        <TextView
+            android:id="@+id/txtTempoPreparo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="10dp"
+            android:text="Tempo de preparo: "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- Porções -->
+        <TextView
+            android:id="@+id/txtPorcoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="10dp"
+            android:text="Porções: "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- Dificuldade -->
+        <TextView
+            android:id="@+id/txtDificuldade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="10dp"
+            android:text="Dificuldade: "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- Média de Avaliação -->
+        <TextView
+            android:id="@+id/txtMediaAvaliacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="10dp"
+            android:text="Avaliação média: "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- Data de Criação -->
+        <TextView
+            android:id="@+id/txtDataCriacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="10dp"
+            android:text="Data de criação: "
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- Lista de Ingredientes -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="10dp"
+            android:text="Ingredientes:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <ListView
+            android:id="@+id/listVIngredientesReceita"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:layout_marginTop="8dp"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/txtPassoAPasso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="10dp"
+            android:text="Modo de preparo (Passo a passo):"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Exibição do passo a passo -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="218dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtPassosReceita"
+                android:layout_width="match_parent"
+                android:layout_height="111dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:lines="20"
+                android:paddingLeft="10dp"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </ScrollView>
+
+        <!-- Campo para avaliação -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:layout_gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtAvaliar"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|center_horizontal"
+                android:paddingLeft="10dp"
+                android:text="Avalie esta receita:"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtAvaliacoes"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:hint=" (1 a 5)"
+                android:inputType="numberDecimal"
+                android:maxLength="1"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnEnviarAvaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#2A612A"
+            android:onClick="enviarAvaliacao"
+            android:text="Enviar Avaliação"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:elevation="4dp"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#2A612A"
+            android:elevation="4dp"
+            android:text="Voltar"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

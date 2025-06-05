@@ -1,0 +1,81 @@
+# ========================================
+# GERAL
+# ========================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ========================================
+# JAVA / MAVEN / SPRING BOOT (Web)
+# ========================================
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.idea/
+*.iws
+*.ipr
+*.bak
+*.log
+.mvn/
+!mvn/wrapper/maven-wrapper.jar
+.settings/
+.classpath
+.project
+
+# ========================================
+# C# / .NET / WINFORMS (Desktop)
+# ========================================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.pdb
+*.exe
+.vs/
+*.cache
+*.dbmdl
+
+# ========================================
+# ANDROID / JAVA / GRADLE (Mobile)
+# ========================================
+.gradle/
+build/
+captures/
+local.properties
+*.iml
+.idea/
+*.apk
+*.dex
+*.class
+gen/
+out/
+app/build/
+app/release/
+app/debug/
+*.log
+
+# Keystore (se tiver)
+*.jks
+*.keystore
+
+# ========================================
+# SISTEMAS OPERACIONAIS
+# ========================================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~

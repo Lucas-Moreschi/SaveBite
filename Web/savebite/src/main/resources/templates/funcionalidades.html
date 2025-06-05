@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveBite - Funcionalidades</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: #5cb85c;
+      margin-bottom: 15px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .feature-icon:hover {
+      color: #4a9e4a;
+      transform: rotate(15deg);
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .feature-title:hover {
+      color: #4a9e4a;
+    }
+
+    .feature-description {
+      font-size: 1rem;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+
+    .feature-description:hover {
+      color: #333;
+    }
+
+    /* Estilo do cabeçalho */
+    header {
+      background-color: #0075008a;
+      padding: 10px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #005500;
+    }
+
+    .logo-container img {
+      max-height: 50px; /* Altura máxima do logo */
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.1);
+    }
+
+    nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #4a9e4a;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      transition: background-color 0.3s ease;
+	  background-color: #333;
+	  color: white;
+	  text-align: center;
+	  padding: 10px 0;
+	  margin-top: 30px;
+	  position: fixed;
+	  bottom: 0;
+	  width: 100%;
+    }
+
+    footer:hover {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center" style="margin-top: 0px;">
+      <div class="logo-container">
+        <a href="home">
+          <img src="src/images/logo_horizontal_branco.png" alt="Logo SaveBite">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre">Sobre Nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro-login">Cadastro/Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="downloads">Download do App</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container py-5">
+    <h2 class="text-center mb-4">Funcionalidades da SaveBite</h2>
+    <p class="text-center mb-5">Descubra como a SaveBite pode ajudar você a aproveitar melhor os ingredientes que já possui em casa.</p>
+
+    <!-- Layout em Grade de Cartões -->
+    <div class="row">
+      <!-- Funcionalidade 1: Receitas Personalizadas -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-card text-center p-4">
+          <div class="feature-icon">🍲</div>
+          <h4 class="feature-title">Receitas Personalizadas</h4>
+          <p class="feature-description">Busque receitas com base nos ingredientes que você tem em casa, ajudando a evitar desperdício.</p>
+        </div>
+      </div>
+
+      <!-- Funcionalidade 2: Adição de Receitas -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-card text-center p-4">
+          <div class="feature-icon">📜</div>
+          <h4 class="feature-title">Adição de Receitas</h4>
+          <p class="feature-description">Compartilhe suas próprias receitas com a comunidade e ajude outras pessoas a cozinhar de forma consciente.</p>
+        </div>
+      </div>
+
+      <!-- Funcionalidade 3: Dicas e Truques -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-card text-center p-4">
+          <div class="feature-icon">💡</div>
+          <h4 class="feature-title">Dicas e Truques</h4>
+          <p class="feature-description">Acesse dicas sobre armazenamento e conservação de alimentos para prolongar a vida útil dos ingredientes.</p>
+        </div>
+      </div>
+
+      <!-- Funcionalidade 4: Comunidade Engajada -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-card text-center p-4">
+          <div class="feature-icon">🌍</div>
+          <h4 class="feature-title">Comunidade Engajada</h4>
+          <p class="feature-description">Interaja com outros amantes da culinária, compartilhe experiências e troque ideias na comunidade SaveBite.</p>
+        </div>
+      </div>
+
+      <!-- Funcionalidade 5: Redução do Desperdício -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-card text-center p-4">
+          <div class="feature-icon">♻️</div>
+          <h4 class="feature-title">Redução do Desperdício</h4>
+          <p class="feature-description">Utilize ao máximo os alimentos que você já possui, diminuindo o desperdício e o impacto ambiental.</p>
+        </div>
+      </div>
+
+      <!-- Funcionalidade 6: Experiência Culinária -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="feature-card text-center p-4">
+          <div class="feature-icon">🍽️</div>
+          <h4 class="feature-title">Experiência Culinária</h4>
+          <p class="feature-description">Desfrute de receitas simples, rápidas e saborosas que transformam cada refeição em uma experiência única.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+      <p>&copy; 2024 SaveBite. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

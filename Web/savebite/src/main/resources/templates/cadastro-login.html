@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveBite - Login e Cadastro</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #2fa92f;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .form-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .btn {
+      font-size: 1.1rem;
+      border-radius: 8px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-primary {
+      background-color: #2fa92f;
+      border-color: #2fa92f;
+    }
+
+    .btn-primary:hover {
+      background-color: #279226;
+      border-color: #279226;
+    }
+
+    .btn-secondary {
+      background-color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    .btn-secondary:hover {
+      background-color: #3a8d3c;
+      border-color: #3a8d3c;
+    }
+
+    .btn i {
+      margin-right: 8px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #2fa92f;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      color: #279226;
+    }
+
+    .alert {
+      font-size: 1rem;
+      margin-top: 20px;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .alert.show {
+      display: block;
+      opacity: 1;
+    }
+
+    .logo-container img {
+      width: 300px; /* Aumente o tamanho do logo conforme necessário */
+      height: auto; /* Mantém as proporções do logo */
+      cursor: pointer;
+      object-fit: cover; /* Ajusta o logo sem distorcer */
+      transition: transform 0.3s ease-in-out; /* Suavidade ao passar o mouse */
+  }
+
+  .logo-container:hover img {
+      transform: scale(1.1); /* Pequeno efeito ao passar o mouse */
+  }
+
+
+    .logo-container .tooltip-text {
+      visibility: hidden;
+      width: 150px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 130%;
+      left: 50%;
+      margin-left: -75px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .logo-container:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #loginForm, #cadastroForm {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      transform: scale(0.95);
+      visibility: hidden;
+    }
+
+    #loginForm.active, #cadastroForm.active {
+      opacity: 1;
+      transform: scale(1);
+      visibility: visible;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <div class="text-center">
+      <div class="logo-container" onclick="goToHome()">
+        <img src="src/images/logo.png" alt="Logo SaveBite">
+        <span class="tooltip-text">Voltar ao início</span>
+      </div>      
+      <h2 class="mt-4">Seja bem-vindo!</h2>
+    </div>
+    
+    <!-- Feedback -->
+    <div id="feedback" class="alert alert-danger">
+      Preencha todos os campos corretamente!
+    </div>
+
+    <!-- Botões para alternar entre Login e Cadastro -->
+    <div class="d-flex justify-content-center mt-4">
+      <button class="btn btn-primary mr-2" onclick="showLogin()">
+        <i class="bi bi-box-arrow-in-right"></i> Login
+      </button>
+      <button class="btn btn-secondary" onclick="showCadastro()">
+        <i class="bi bi-person-plus"></i> Cadastro
+      </button>
+    </div>
+
+    <!-- Formulário de Login -->
+    <div id="loginForm" class="mt-4 active">
+      <h3>Login</h3>
+      <form id="loginFormSubmit" method="post" action="/login">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" class="form-control" id="loginEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="loginSenha">Senha</label>
+          <input type="password" class="form-control" id="loginSenha" name="senha" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+      <a href="recuperar-senha" class="back-link">Esqueceu sua senha?</a>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <div id="cadastroForm" class="mt-4">
+      <h3>Cadastro</h3>
+      <form id="cadastroFormSubmit">
+        <div class="form-group">
+          <label for="cadastroNome">Nome</label>
+          <input type="text" class="form-control" id="cadastroNome" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="cadastroEmail">Email</label>
+          <input type="email" class="form-control" id="cadastroEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="cadastroSenha">Senha</label>
+          <input type="password" class="form-control" id="cadastroSenha" name="senha" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmarSenha">Confirmar Senha</label>
+          <input type="password" class="form-control" id="confirmarSenha" name="confirmar_senha" required>
+        </div>
+        <button type="submit" class="btn btn-secondary">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function showLogin() {
+      document.getElementById("loginForm").classList.add("active");
+      document.getElementById("cadastroForm").classList.remove("active");
+    }
+
+    function showCadastro() {
+      document.getElementById("loginForm").classList.remove("active");
+      document.getElementById("cadastroForm").classList.add("active");
+    }
+
+    function goToHome() {
+      window.location.href = "home";
+    }
+  </script>
+</body>
+</html>

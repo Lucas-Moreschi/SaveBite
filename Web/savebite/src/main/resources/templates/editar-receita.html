@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveBite - Editar Receita</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background-color: #0075008a;
+      padding: 10px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #005500;
+    }
+
+    .logo-container img {
+      max-height: 50px;
+    }
+
+    nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #4a9e4a;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .btn-voltar {
+      background-color: #5cb85c;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-voltar:hover {
+      background-color: #4a9e4a;
+      transform: scale(1.05);
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .btn-save {
+      background-color: #5cb85c;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn-save:hover {
+      background-color: #4a9e4a;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 30px;
+    }
+
+    footer:hover {
+      background-color: #111;
+    }
+
+    .form-section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center" style="margin-top: 0px;">
+        <div class="logo-container">
+        <a href="painel-usuario">
+          <img src="src/images/logo_horizontal_branco.png" alt="Logo SaveBite">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre">Sobre Nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro-login">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <div class="mb-4">
+      <a href="/painel-usuario" class="btn-voltar">Voltar</a>
+    </div>
+
+    <div class="form-section">
+      <h3 class="section-title">Editar Receita</h3>
+      <form>
+        <div class="mb-3">
+          <label for="nomeReceita">Nome da Receita</label>
+          <input type="text" class="form-control" id="nomeReceita" value="Torta de Maçã">
+        </div>
+        <div class="mb-3">
+          <label for="descricaoReceita">Descrição</label>
+          <textarea class="form-control" id="descricaoReceita" rows="3">Uma torta deliciosa e fácil de preparar com ingredientes simples.</textarea>
+        </div>
+        <div class="mb-3">
+          <label for="tempoPreparo">Tempo de Preparo (minutos)</label>
+          <input type="number" class="form-control" id="tempoPreparo" value="60">
+        </div>
+        <div class="mb-3">
+          <label for="porcoes">Porções</label>
+          <input type="number" class="form-control" id="porcoes" value="8">
+        </div>
+        <div class="mb-3">
+          <label for="dificuldade">Dificuldade</label>
+          <select class="form-control" id="dificuldade">
+            <option value="Fácil">Fácil</option>
+            <option value="Média" selected>Média</option>
+            <option value="Difícil">Difícil</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="ingredientes">Ingredientes</label>
+          <textarea class="form-control" id="ingredientes" rows="4">2 maçãs grandes, 1 xícara de açúcar, 2 xícaras de farinha de trigo, 1 colher de sopa de canela, 1 colher de sopa de fermento</textarea>
+        </div>
+        <div class="mb-3">
+          <label for="instrucoes">Instruções</label>
+          <textarea class="form-control" id="instrucoes" rows="5">1. Pré-aqueça o forno a 180ºC. 2. Misture os ingredientes secos em uma tigela. 3. Adicione as maçãs picadas e misture bem. 4. Leve ao forno por 40 minutos ou até dourar.</textarea>
+        </div>
+        <button type="submit" class="btn-save">Salvar Alterações</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 SaveBite. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

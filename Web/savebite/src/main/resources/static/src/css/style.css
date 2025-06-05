@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #00ff083d;
+}
+
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    padding-left: calc(82px + 20px);
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #2fa92f8a;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;
+    position: fixed;
+    transition: all .5s;
+    min-width: 82px;
+    z-index: 2;
+}
+
+#sidebar_content {
+    padding: 12px;
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+#user_avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#user_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#user_infos span:last-child {
+    color: #6b6b6b;
+    font-size: 12px;
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.side-item.active {
+    background-color: #1f6622;
+}
+
+.side-item:hover:not(.active),
+#logout_btn:hover {
+    background-color: #e3e9f7;
+}
+
+.side-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+}
+
+.side-item.active a {
+    color: #e3e9f7;
+}
+
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+#logout {
+    border-top: 1px solid #e3e9f7;
+    padding: 12px;
+}
+
+#logout_btn {
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#open_btn {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: #1f6622;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon {
+    transition: transform .3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+#sidebar.open-sidebar {
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description {
+    width: 150px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+#content {
+    transition: margin-left 0.6s ease; /* Transição suave de 0.3 segundos */
+}
+
+.content-expanded {
+    margin-left: 13%; /* Largura da sidebar quando aberta */
+}
+
+.content-minimized {
+    margin-left: 1%; /* Margem quando a sidebar está fechada */
+}
+
+#sobre {
+    background-color: #f9f9f900; /* Cor de fundo suave */
+    padding: 40px 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 20px 0; /* Margem superior e inferior */
+    margin-right: 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.container {
+    max-width: 900%; /* Largura máxima para o conteúdo */
+    padding: 5%;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+#sobre h1 {
+    font-size: 3.0em; /* Tamanho da fonte do título principal */
+    /*font-family: "Sofia", sans-serif; */
+    font-family: 'Brush Script MT', cursive;
+    color: #2fa92f; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+#sobre h2 {
+    font-size: 2.5em; /* Tamanho da fonte dos subtítulos */
+    font-family: 'Brush Script MT', cursive;
+    color: #2fa92f; /* Cor dos subtítulos */
+    margin-top: 20px; /* Espaço acima dos subtítulos */
+    margin-bottom: 10px; /* Espaço abaixo dos subtítulos */
+}
+
+#sobre p {
+    font-size: 1.3em; /* Tamanho da fonte do parágrafo */
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    color: #000000; /* Cor do texto */
+    margin-bottom: 15px; /* Espaço abaixo dos parágrafos */
+}
+
+#sobre ul {
+    margin: 15px 0; /* Margem superior e inferior da lista */
+    padding-left: 20px; /* Espaçamento à esquerda da lista */
+}
+
+#sobre ul li {
+    margin-bottom: 10px; /* Espaço abaixo dos itens da lista */
+    font-family: 'Times New Roman', serif;
+    font-size: 1.3em; /* Tamanho da fonte dos itens da lista */
+    color: #000000; /* Cor dos itens da lista */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #sobre h1 {
+        font-size: 2em; /* Tamanho do título principal em telas menores */
+    }
+    
+    #sobre h2 {
+        font-size: 1.5em; /* Tamanho dos subtítulos em telas menores */
+    }
+    
+    #sobre p {
+        font-size: 1em; /* Tamanho do parágrafo em telas menores */
+    }
+    
+    #sobre ul li {
+        font-size: 1em; /* Tamanho dos itens da lista em telas menores */
+    }
+}
+

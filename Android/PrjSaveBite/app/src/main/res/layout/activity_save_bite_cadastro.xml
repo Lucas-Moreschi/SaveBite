@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E48A84C"
+    android:orientation="vertical">
+
+    <!-- Título da Aplicação -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#009688"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:text="Save Bite"
+        android:textColor="#F6F1F1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <!-- Título da Página -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:text="Cadastro de Usuário"
+        android:textColor="#121111"
+        android:textSize="16sp" />
+
+    <!-- Campo Nome Completo -->
+    <EditText
+        android:id="@+id/editNomeCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Digite o seu Nome Completo"
+        android:inputType="textPersonName" />
+
+    <!-- Campo E-mail -->
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Digite o seu E-mail"
+        android:inputType="textEmailAddress" />
+
+    <!-- Campo Senha -->
+    <EditText
+        android:id="@+id/editSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Digite a sua Senha"
+        android:inputType="textPassword" />
+
+    <!-- Campo Confirmação de Senha -->
+    <EditText
+        android:id="@+id/editConfSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Confirme a sua Senha"
+        android:inputType="textPassword" />
+
+    <!-- Espaço para separação -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <!-- Botão Cadastrar -->
+    <Button
+        android:id="@+id/btnCadastrarUsuario"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:onClick="Cadastrar"
+        android:text="Cadastrar"
+        android:textColor="#FAF8F8"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:elevation="4dp"/>
+
+    <!-- Botão Voltar -->
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Voltar"
+        android:textColor="#F8F7F7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:elevation="4dp"/>
+</LinearLayout>

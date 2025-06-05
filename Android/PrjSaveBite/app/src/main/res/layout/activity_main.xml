@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2FFFFFFF"
+    android:backgroundTint="#48A84C"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#009688"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:text="Save Bite"
+        android:textColor="#F6F1F1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/logo01" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:text="Login de usuário"
+        android:textColor="#83121111"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editNomeLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Digite o seu E-mail"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editSenhaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:hint="Digite a sua Senha"
+        android:inputType="textPassword" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="entrar"
+        android:text="Entrar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:elevation="4dp"/>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-medium"
+        android:text="Cadastrar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:elevation="4dp"/>
+
+</LinearLayout>

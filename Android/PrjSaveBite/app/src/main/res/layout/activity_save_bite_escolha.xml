@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaf7e5"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <!-- Boas-vindas -->
+
+    <!-- Pergunta "O que gostaria de fazer?" -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#009688"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:text="Save Bite Menu"
+        android:textColor="#F6F1F1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_boas_vindas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:fontFamily="cursive"
+        android:text="Olá,"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#4CAF50"
+        android:textSize="96sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtNomeUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:textColor="#014E04"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/text_acao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="O que faremos dessa vez?"
+        android:textColor="#4CAF50"
+        android:textSize="16sp" />
+
+    <!-- Botão Criar Nova Receita -->
+    <Button
+        android:id="@+id/btnCriarRec"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#4CAF50"
+        android:gravity="center"
+        android:text="Adicioanar nova Receita"
+        android:textColor="#FFFFFF" />
+
+    <!-- Botão Ver Minhas Receitas -->
+    <Button
+        android:id="@+id/btnVerRec"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:gravity="center"
+        android:text="Navegar por receitas"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp"/>
+
+    <Button
+        android:id="@+id/btnMinhasRec"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:gravity="center"
+        android:text="Minhas Receitas"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp"/>
+
+
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#2A612A"
+        android:text="Sair"
+        android:textColor="#F6F4F4" />
+
+
+
+</LinearLayout>

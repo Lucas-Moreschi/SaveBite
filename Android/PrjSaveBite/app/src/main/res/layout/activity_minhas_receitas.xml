@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaf7e5"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:scrollbars="vertical">
+
+    <!-- Título da página -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="cursive"
+        android:text="Receitas adicionadas por Você!"
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <!-- Lista de Receitas do Usuário -->
+    <ListView
+        android:id="@+id/listMinhasReceitas"
+        android:layout_width="match_parent"
+        android:layout_height="464dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+    <!-- Botões de Voltar ao Menu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnVoltarMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2A612A"
+            android:text="Voltar ao Menu"
+            android:textColor="#F8F4F4"
+            android:elevation="4dp"/>
+    </LinearLayout>
+</LinearLayout>

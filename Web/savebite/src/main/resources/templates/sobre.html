@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaveBite - Sobre Nós</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    .section {
+      padding: 60px 0;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+      background-color: #e9f5e9;
+    }
+
+    .section-bg {
+      background-color: #f8f9fa;
+      transition: background-color 0.3s ease;
+    }
+
+    .section-bg:hover {
+      background-color: #e9f5e9;
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      color: #5cb85c;
+      margin-bottom: 15px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .icon:hover {
+      color: #4a9e4a;
+      transform: rotate(10deg);
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .section-title:hover {
+      color: #4a9e4a;
+    }
+
+    .section-content {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+
+    .section-content:hover {
+      color: #333;
+    }
+
+    .cta-button {
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border-radius: 5px;
+      margin-top: 50px;
+      color: white;
+      background-color: #5cb85c;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      font-weight: bold; /* Aplica o negrito */
+      text-decoration: none; /* Mantém o texto sem sublinhado */
+      color: white; /* Garante que a cor não mude */
+    }
+
+    /* Estilo do cabeçalho */
+    header {
+      background-color: #0075008a;
+      padding: 10px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #005500;
+    }
+
+    .logo-container img {
+      max-height: 50px; /* Altura máxima para o logo */
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.1);
+    }
+
+    nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav .nav-link:hover {
+      color: #4a9e4a;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      transition: background-color 0.3s ease;
+    }
+
+    footer:hover {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo-container">
+        <a href="home">
+          <img src="src/images/logo_horizontal_branco.png" alt="Logo SaveBite" style="height: 50px;">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre">Sobre Nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="funcionalidades">Funcionalidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="cadastro-login">Cadastro/Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="downloads">Download do App</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Sobre Nós -->
+  <section class="section">
+    <div class="container">
+      <div class="icon">🌱</div>
+      <h2 class="section-title">Sobre a SaveBite</h2>
+      <p class="section-content">
+        Na SaveBite, acreditamos que cada ingrediente pode fazer a diferença. Nossa missão é combater o desperdício de alimentos com criatividade e praticidade, transformando ingredientes que poderiam ser descartados em pratos deliciosos e nutritivos. Somos apaixonados pela sustentabilidade e dedicados a conscientizar sobre o consumo responsável.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção O que Fazemos -->
+  <section class="section section-bg">
+    <div class="container">
+      <div class="icon">👩‍🍳</div>
+      <h2 class="section-title">O que Fazemos</h2>
+      <p class="section-content">
+        Nossa plataforma ajuda você a aproveitar melhor os ingredientes que já possui em casa. Com a SaveBite, você encontra receitas personalizadas para os ingredientes disponíveis, reduzindo o desperdício e facilitando a rotina na cozinha.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção Recursos da Plataforma -->
+  <section class="section">
+    <div class="container">
+      <div class="icon">🛠️</div>
+      <h2 class="section-title">Recursos da Plataforma</h2>
+      <p class="section-content">
+        Oferecemos recursos que tornam o dia a dia mais prático e sustentável:
+        <ul class="list-unstyled mt-3">
+          <li><strong>📋 Receitas Personalizadas:</strong> Encontre receitas baseadas nos ingredientes que você tem em casa.</li>
+          <li><strong>🍲 Adição de Receitas:</strong> Compartilhe suas receitas e inspire a comunidade.</li>
+          <li><strong>💡 Dicas e Truques:</strong> Aprenda sobre conservação e aproveitamento de alimentos.</li>
+          <li><strong>🌐 Comunidade Engajada:</strong> Conecte-se com outras pessoas que compartilham da nossa missão.</li>
+        </ul>
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção Benefícios da SaveBite -->
+  <section class="section section-bg">
+    <div class="container">
+      <div class="icon">🚀</div>
+      <h2 class="section-title">Por que Escolher a SaveBite?</h2>
+      <p class="section-content">
+        Nós não somos apenas um aplicativo de receitas; somos uma iniciativa para promover um consumo consciente e prazeroso:
+        <ul class="list-unstyled mt-3" style="margin-bottom: 50px;">
+          <li><strong>🌍 Redução do Desperdício:</strong> Nossas receitas ajudam a minimizar o desperdício de alimentos.</li>
+          <li><strong>📚 Educação e Consciência:</strong> Engajamos nossa comunidade na luta contra o desperdício.</li>
+          <li><strong>👨‍🍳 Experiência na Cozinha:</strong> Torne a culinária mais divertida e prática com receitas simples e deliciosas.</li>
+        </ul>
+      </p>
+      <a href="cadastro-login" class="cta-button">Junte-se a Nós</a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+      <p>&copy; 2024 SaveBite. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

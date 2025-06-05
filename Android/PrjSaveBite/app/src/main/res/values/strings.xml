@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">PrjSaveBite</string>
+
+    <string-array name="medidas_array">
+        <item>g</item>
+        <item>mg</item>
+        <item>l</item>
+        <item>ml</item>
+        <item>Xícara(s)</item>
+        <item>Colher(es) de sopa</item>
+        <item>Unidade(s)</item>
+
+
+    </string-array>
+
+    <string-array name="dificuldades">
+        <item>Fácil</item>
+        <item>Médio</item>
+        <item>Difícil</item>
+        <item>"?"</item>
+    </string-array>
+
+
+    <string name="usuario_nome">%1$s !</string>
+
+    <string name="avaliacao_media">Avaliação média: %1$.2f</string>
+
+
+</resources>

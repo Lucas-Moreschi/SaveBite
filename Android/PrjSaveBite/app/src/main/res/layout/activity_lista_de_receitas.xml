@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaf7e5"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:scrollbars="vertical"> <!-- Permitir o scroll na tela -->
+
+    <!-- Título da página -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="cursive"
+        android:text="Receitas da Comunidade"
+        android:textColor="#4CAF50"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <!-- Campo de pesquisa por nome da receita -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtPesquisaNomeReceita"
+            android:layout_width="328dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/edit_text"
+            android:hint="Pesquisar por nome da receita"
+            android:padding="8dp"
+            android:textColorHint="#808080" />
+
+        <ImageButton
+            android:id="@+id/btnPesquisarNomeReceita"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/rounded_button_background"
+            android:backgroundTint="#2A612A"
+            android:contentDescription="Pesquisar por nome da receita"
+            android:padding="10dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:elevation="4dp"/>
+    </LinearLayout>
+
+    <!-- Campo de pesquisa por ingrediente -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtPesquisaIngrediente"
+            android:layout_width="328dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/edit_text"
+            android:hint="Pesquisar por ingrediente"
+            android:padding="8dp"
+            android:textColorHint="#808080" />
+
+        <ImageButton
+            android:id="@+id/btnPesquisarIngredientes"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/rounded_button_background"
+            android:backgroundTint="#2A612A"
+            android:contentDescription="Pesquisar"
+            android:elevation="4dp"
+            android:padding="10dp"
+            android:src="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+
+
+    <!-- Lista de Receitas -->
+    <ListView
+        android:id="@+id/listVReceitas"
+        android:layout_width="match_parent"
+        android:layout_height="464dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+    <!-- Botões de Voltar ao Menu e Desfazer Pesquisa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnVoltarMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2A612A"
+            android:text="Voltar ao Menu"
+            android:textColor="#F8F4F4"
+            android:elevation="4dp"/>
+
+        <Button
+            android:id="@+id/btnDesfazerPesquisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#2A612A"
+            android:text="Desfazer Pesquisa"
+            android:textColor="#F8F4F4" />
+    </LinearLayout>
+
+</LinearLayout>
